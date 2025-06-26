@@ -1,0 +1,86 @@
+/* choose.css */
+
+/* Stream selection container */
+.stream-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  flex: 1 0 auto;
+  background: #fff;
+}
+
+.stream-container h2 {
+  font-size: 1.8rem;
+  color: #5271ff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Options layout */
+.options {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.stream-option {
+  cursor: pointer;
+}
+
+.stream-option input {
+  display: none;
+}
+
+/* Card styling */
+.card {
+  width: 200px;
+  height: 140px;
+  background: #f0f4ff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s, transform 0.3s;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #ea0069;
+}
+
+/* Hover effect */
+.stream-option:hover .card {
+  transform: translateY(-5px);
+}
+
+/* Checked state */
+.stream-option input:checked + .card {
+  border-color: #5271ff;
+  background: #dee8ff;
+}
+
+/* Start button */
+#start-btn {
+  background: #5271ff;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#start-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#start-btn:not(:disabled):hover {
+  background: #ea0069;
+}

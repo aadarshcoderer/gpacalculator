@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPA Calculator For General</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <!-- Poppins Medium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="https://www.gyanjyotiedu.com/Home.html">
+        <img src="images/logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Desktop navigation -->
+    <nav class="desktop-nav">
+      <ul>
+        <li>
+          <a href="https://www.gyanjyotiedu.com/Home.html">
+            <!-- Home icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 .293l6 6V15h-4v-4H6v4H2V6.293l6-6z"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="index.html" class="active">
+            <!-- Calculator icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3 0a1 1 0 0 0-1 1v14h12V1a1 1 0 0 0-1-1H3zm1 2h8v2H4V2zm0 3h1v1H4V5zm2 0h1v1H6V5zm2 0h1v1H8V5zm2 0h1v1h-1V5zM4 8h8v6H4V8z"/>
+            </svg>
+            Calculator
+          </a>
+        </li>
+        <li>
+          <a href="https://www.gyanjyotiedu.com/VideoCourse.html">
+            <!-- Course (mortarboard) icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 0L0 3l8 3 8-3-8-3zm0 4.5L1.5 2.75v2.5L8 7.5l6.5-2.25v-2.5L8 4.5z"/>
+              <path d="M2 8v2l6 2 6-2V8l-6 2-6-2z"/>
+            </svg>
+            Course
+          </a>
+        </li>
+        <li>
+          <a href="https://www.gyanjyotiedu.com/MainCourse.html">
+            <!-- Books icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M1 2.828c.885-.37 2.154-.828 4-.828 1.846 0 3.115.458 4 .828v10.344C8.115 13.542 6.846 13 5 13c-1.846 0-3.115.542-4 .172V2.828z"/>
+              <path d="M15 2.828c-.885-.37-2.154-.828-4-.828-1.846 0-3.115.458-4 .828v10.344c.885-.37 2.154-.828 4-.828 1.846 0 3.115.458 4 .828V2.828z"/>
+            </svg>
+            Books
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile side nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="https://www.gyanjyotiedu.com/Home.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 .293l6 6V15h-4v-4H6v4H2V6.293l6-6z"/></svg>Home</a></li>
+        <li><a href="index.html" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3 0a1 1 0 0 0-1 1v14h12V1a1 1 0 0 0-1-1H3zm1 2h8v2H4V2zm0 3h1v1H4V5zm2 0h1v1H6V5zm2 0h1v1H8V5zm2 0h1v1h-1V5zM4 8h8v6H4V8z"/></svg>Calculator</a></li>
+        <li><a href="https://www.gyanjyotiedu.com/VideoCourse.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0L0 3l8 3 8-3-8-3zm0 4.5L1.5 2.75v2.5L8 7.5l6.5-2.25v-2.5L8 4.5z"/><path d="M2 8v2l6 2 6-2V8l-6 2-6-2z"/></svg>Course</a></li>
+        <li><a href="https://www.gyanjyotiedu.com/MainCourse.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.828c.885-.37 2.154-.828 4-.828 1.846 0 3.115.458 4 .828v10.344C8.115 13.542 6.846 13 5 13c-1.846 0-3.115.542-4 .172V2.828z"/><path d="M15 2.828c-.885-.37-2.154-.828-4-.828-1.846 0-3.115.458-4 .828v10.344c.885-.37 2.154-.828 4-.828 1.846 0 3.115.458 4 .828V2.828z"/></svg>Books</a></li>
+      </ul>
+    </div>
+    <div class="overlay" id="nav-overlay"></div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+    <h2>GPA Calculator For General Stream</h2>
+    <p>Enter your scored GPA (0.00 – 4.00) for each subject part, then click Calculate.</p>
+    <div id="error-msg" class="error-msg" aria-live="polite"></div>
+
+    <form id="gpa-form" novalidate>
+      <h3>Subjects</h3>
+      <div class="table-wrapper">
+        <table id="main-subjects-table">
+          <thead>
+            <tr><th>Subject</th><th>Part</th><th>Scored GPA</th><th>Credit Hour</th><th>Subject Point</th><th>Final Grade</th></tr>
+          </thead>
+          <tbody>
+            <!-- English -->
+            <tr data-subject="English"><td>English</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3.75" step="0.01" min="0" max="4" required/></td><td>3.75</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="English"><td>English</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1.25" step="0.01" min="0" max="4" required/></td><td>1.25</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Nepali -->
+            <tr data-subject="Nepali"><td>Nepali</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3.75" step="0.01" min="0" max="4" required/></td><td>3.75</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Nepali"><td>Nepali</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1.25" step="0.01" min="0" max="4" required/></td><td>1.25</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Maths -->
+            <tr data-subject="Maths"><td>Maths</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3.75" step="0.01" min="0" max="4" required/></td><td>3.75</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Maths"><td>Maths</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1.25" step="0.01" min="0" max="4" required/></td><td>1.25</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Science -->
+            <tr data-subject="Science"><td>Science</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3.75" step="0.01" min="0" max="4" required/></td><td>3.75</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Science"><td>Science</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1.25" step="0.01" min="0" max="4" required/></td><td>1.25</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Social -->
+            <tr data-subject="Social"><td>Social</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3" step="0.01" min="0" max="4" required/></td><td>3</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Social"><td>Social</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1" step="0.01" min="0" max="4" required/></td><td>1</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Optional-I -->
+            <tr data-subject="Optional-I"><td>Optional-I</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3" step="0.01" min="0" max="4" required/></td><td>3</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Optional-I"><td>Optional-I</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1" step="0.01" min="0" max="4" required/></td><td>1</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <!-- Optional-II -->
+            <tr data-subject="Optional-II"><td>Optional-II</td><td>TH</td><td><input type="number" class="gpa-input" data-credit="3" step="0.01" min="0" max="4" required/></td><td>3</td><td class="subject-point">-</td><td class="final-grade">-</td></tr>
+            <tr data-subject="Optional-II"><td>Optional-II</td><td>IN</td><td><input type="number" class="gpa-input" data-credit="1" step="0.01" min="0" max="4" required/></td><td>1</td><td class="subject-point">-</td><td class="final-grade">-</td></tr> 
+          </tbody>
+        </table>
+      </div>
+
+     <div class="button-row">
+  <button type="button" class="btn" id="calculate-btn">Calculate GPA</button>
+  <a href="calculator.html" class="btn return-btn">Return to Choose</a>
+</div>
+    </form>
+    
+
+    <div class="results" id="results">
+      <p><strong>Total GPA :</strong> <span id="total-gpa"></span></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Gyanjyoti. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
